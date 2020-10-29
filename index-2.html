@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Switch ON/OFF</title>
+    <style>
+        body{
+            background-color: #ace0f9;
+            background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+        }
+        .btn-on{
+            background-color: green;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        .btn-off{
+            background-color: red;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        .link{
+            color: black;
+            text-decoration: none;
+        }
+
+        .link:hover{
+            color: red;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="display: flex; justify-content: center; align-items: center; height: 90vh">
+        <img src="img/b-off.png" alt="" id="bulb" height="500">
+    </div>
+    <div style="text-align: center;" align="center">
+        <button class="btn-on" onclick="light(1)">ON</button>
+        <button class="btn-off" onclick="light(0)">OFF</button>
+    </div>
+    
+    <div align="right">
+        <a href="index.html" class="link">PREVIOUS PAGE</a>
+    </div>
+    
+    
+
+    <script>
+        function light(value)
+        {
+            var pic;
+            if(value==0){
+                pic="img/b-off.png";
+            }
+            else{
+                pic = "img/b-on.png";
+            }
+
+            document.getElementById('bulb').src=pic;
+        }
+    </script>
+</body>
+</html>
